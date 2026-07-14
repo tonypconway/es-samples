@@ -268,6 +268,14 @@ function escapeTableCell(text) {
 }
 
 function getBaselineInfo(compatKey, webFeatureId) {
+  if (compatKey === 'javascript.statements.strict_mode' || webFeatureId === 'strict-mode') {
+    return {
+      resolvedWfId: 'strict-mode',
+      newlyAvailable: 'Pre-Baseline (Universal Support)*',
+      widelyAvailable: 'Pre-Baseline (Universal Support)*'
+    };
+  }
+
   let status = null;
   let resolvedWfId = webFeatureId;
 
@@ -336,6 +344,8 @@ export function generateMarkdown(manifest) {
 
     md += `| ${name} | ${description} | ${esVersionLink} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} |\n`;
   }
+
+  md += `\n\* *Features marked "Pre-Baseline (Universal Support)" (such as ES5.1 Strict Mode) have been universally supported across all major browsers since before Baseline tracking began in 2015.*\n`;
 
   fs.writeFileSync(markdownPath, md, 'utf8');
   console.log(`✔ Generated FEATURES.md successfully (${manifest.length} features listed).`);
