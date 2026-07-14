@@ -1,0 +1,32 @@
+{
+  "name": "es-samples",
+  "version": "1.0.0",
+  "description": "ECMAScript code samples library (ES2011-ES2026)",
+  "type": "module",
+  "main": "./samples/index.js",
+  "exports": {
+    ".": "./samples/index.js",
+    "./samples": "./samples/index.js",
+    "./samples/index.js": "./samples/index.js",
+    "./samples/*": "./samples/*.js",
+    "./*": "./samples/*.js"
+  },
+  "scripts": {
+    "build:features": "node scripts/build-features.js",
+    "test": "node scripts/build-features.js && node samples/test.js"
+  },
+  "keywords": [
+    "ecmascript",
+    "javascript",
+    "es5",
+    "es2011",
+    "es2015",
+    "es2026"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mdn/browser-compat-data": "^8.0.6",
+    "web-features": "^3.32.0"
+  }
+}
