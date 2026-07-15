@@ -17,3 +17,7 @@ Run tests to verify sample code validity:
 ```bash
 npm test
 ```
+
+## License
+
+[MIT](LICENSE)

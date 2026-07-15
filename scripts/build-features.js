@@ -249,14 +249,7 @@ export function syncManifest() {
   // Filter out entries whose functions no longer exist in sample files
   manifest = manifest.filter(item => !item.functionName || activeFnNames.has(item.functionName));
 
-  manifest.sort((a, b) => {
-    const yearA = getEsYear(a.esVersion);
-    const yearB = getEsYear(b.esVersion);
-    if (yearA !== yearB) {
-      return yearA - yearB;
-    }
-    return a.name.localeCompare(b.name);
-  });
+  manifest.sort(compareFeatures);
 
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
   return manifest;
@@ -310,27 +303,67 @@ function getEsYear(esVer) {
   return match ? parseInt(match[0], 10) : 9999;
 }
 
+function getWidelyAvailableCategory(widelyAvailable) {
+  if (!widelyAvailable) return { rank: 2, value: '' };
+  const wa = String(widelyAvailable).trim();
+  if (wa.toLowerCase().includes('pre-baseline')) {
+    return { rank: 0, value: wa };
+  }
+  if (wa.toLowerCase().includes('limited availability')) {
+    return { rank: 2, value: wa };
+  }
+  return { rank: 1, value: wa };
+}
+
+function compareFeatures(a, b) {
+  const infoA = getBaselineInfo(a.compatKey, a.webFeatureId);
+  const infoB = getBaselineInfo(b.compatKey, b.webFeatureId);
+
+  const catA = getWidelyAvailableCategory(infoA.widelyAvailable);
+  const catB = getWidelyAvailableCategory(infoB.widelyAvailable);
+
+  if (catA.rank !== catB.rank) {
+    return catA.rank - catB.rank;
+  }
+
+  if (catA.rank === 1 && catA.value !== catB.value) {
+    return catA.value.localeCompare(catB.value);
+  }
+
+  const yearA = getEsYear(a.esVersion);
+  const yearB = getEsYear(b.esVersion);
+  if (yearA !== yearB) {
+    return yearA - yearB;
+  }
+
+  return a.name.localeCompare(b.name);
+}
+
+function formatDescription(desc) {
+  if (!desc) return '';
+  let trimmed = desc.trim();
+  trimmed = trimmed.replace(/[,;:]$/, '');
+  if (!/[.!?…]$/.test(trimmed) && !trimmed.endsWith('...')) {
+    trimmed += '...';
+  }
+  return escapeTableCell(trimmed);
+}
+
 export function generateMarkdown(manifest) {
   let md = `# ECMAScript Language Features Index\n\n`;
   md += `A comprehensive breakdown of ECMAScript language features showcased across the executable code samples in \`es-samples\` (ES2011/ES5.1 through ES2026), cross-referenced with MDN [browser-compat-data](https://github.com/mdn/browser-compat-data) and Baseline web feature identifiers on [webstatus.dev](https://webstatus.dev).\n\n`;
-  md += `| Feature Name | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available |\n`;
-  md += `| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n`;
+  md += `| Feature Name | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available | Baseline Year Match |\n`;
+  md += `| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: |\n`;
 
-  const sortedManifest = [...manifest].sort((a, b) => {
-    const yearA = getEsYear(a.esVersion);
-    const yearB = getEsYear(b.esVersion);
-    if (yearA !== yearB) {
-      return yearA - yearB;
-    }
-    return a.name.localeCompare(b.name);
-  });
+  const sortedManifest = [...manifest].sort(compareFeatures);
 
   for (const item of sortedManifest) {
     const { resolvedWfId, newlyAvailable, widelyAvailable } = getBaselineInfo(item.compatKey, item.webFeatureId);
     
-    const escapedCompatKey = escapeTableCell(item.compatKey);
+    const displayCompatKey = item.compatKey ? item.compatKey.replace(/^javascript\./, '') : '';
+    const escapedCompatKey = escapeTableCell(displayCompatKey);
     const bcdUrl = getBcdGithubUrl(item.compatKey);
-    const compatKeyLink = bcdUrl ? `[\`${escapedCompatKey}\`](${bcdUrl})` : `\`${escapedCompatKey}\``;
+    const compatKeyLink = bcdUrl ? `[${escapedCompatKey}](${bcdUrl})` : escapedCompatKey;
 
     const targetWfId = resolvedWfId || item.webFeatureId;
     const escapedWfId = escapeTableCell(targetWfId);
@@ -338,11 +371,20 @@ export function generateMarkdown(manifest) {
 
     const rawName = escapeTableCell(item.name);
     const name = rawName.includes('*') || rawName.includes('`') ? rawName : `**${rawName}**`;
-    const description = escapeTableCell(item.description);
+    const description = formatDescription(item.description);
     const esVersion = escapeTableCell(item.esVersion);
     const esVersionLink = item.sampleFile ? `[${esVersion}](${item.sampleFile})` : esVersion;
 
-    md += `| ${name} | ${description} | ${esVersionLink} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} |\n`;
+    const esYear = getEsYear(item.esVersion);
+    const newlyYearMatch = newlyAvailable.match(/\b\d{4}\b/);
+    const newlyYear = newlyYearMatch ? parseInt(newlyYearMatch[0], 10) : null;
+    const isYearMatched = esYear !== 9999 && newlyYear !== null && esYear === newlyYear;
+
+    const matchBadge = isYearMatched
+      ? `<span style="background-color: #2ea043; color: white; padding: 2px 6px; border-radius: 3px; font-weight: bold;">TRUE</span>`
+      : `<span style="background-color: #da3633; color: white; padding: 2px 6px; border-radius: 3px; font-weight: bold;">FALSE</span>`;
+
+    md += `| ${name} | ${description} | ${esVersionLink} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} | ${matchBadge} |\n`;
   }
 
   md += `\n\* *Features marked "Pre-Baseline (Universal Support)" (such as ES5.1 Strict Mode) have been universally supported across all major browsers since before Baseline tracking began in 2015.*\n`;
