@@ -360,10 +360,10 @@ export function generateMarkdown(manifest) {
   for (const item of sortedManifest) {
     const { resolvedWfId, newlyAvailable, widelyAvailable } = getBaselineInfo(item.compatKey, item.webFeatureId);
     
-    const displayCompatKey = item.compatKey ? item.compatKey.replace(/^javascript\./, '') : '';
+    const displayCompatKey = item.compatKey ? item.compatKey.replace(/^\./, '').replace(/\./g, '.`<br>`') : '';
     const escapedCompatKey = escapeTableCell(displayCompatKey);
     const bcdUrl = getBcdGithubUrl(item.compatKey);
-    const compatKeyLink = bcdUrl ? `[${escapedCompatKey}](${bcdUrl})` : escapedCompatKey;
+    const compatKeyLink = bcdUrl ? `[\`${escapedCompatKey}\`](${bcdUrl})` : `\`${escapedCompatKey}\``;
 
     const targetWfId = resolvedWfId || item.webFeatureId;
     const escapedWfId = escapeTableCell(targetWfId);
@@ -378,11 +378,20 @@ export function generateMarkdown(manifest) {
     const esYear = getEsYear(item.esVersion);
     const newlyYearMatch = newlyAvailable.match(/\b\d{4}\b/);
     const newlyYear = newlyYearMatch ? parseInt(newlyYearMatch[0], 10) : null;
-    const isYearMatched = esYear !== 9999 && newlyYear !== null && esYear === newlyYear;
 
-    const matchBadge = isYearMatched
-      ? `<span style="background-color: #2ea043; color: white; padding: 2px 6px; border-radius: 3px; font-weight: bold;">TRUE</span>`
-      : `<span style="background-color: #da3633; color: white; padding: 2px 6px; border-radius: 3px; font-weight: bold;">FALSE</span>`;
+    const isPreBaseline = String(newlyAvailable).toLowerCase().includes('pre-baseline');
+    let matchBadge = '❌';
+    if (isPreBaseline) {
+      matchBadge = '❎';
+    } else if (esYear !== 9999 && newlyYear !== null) {
+      if (newlyYear === esYear) {
+        matchBadge = '✅';
+      } else if (newlyYear < esYear) {
+        matchBadge = '⚡';
+      } else if (newlyYear > esYear) {
+        matchBadge = '🐢';
+      }
+    }
 
     md += `| ${name} | ${description} | ${esVersionLink} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} | ${matchBadge} |\n`;
   }
