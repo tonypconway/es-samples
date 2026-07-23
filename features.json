@@ -5,7 +5,7 @@
     "description": "Introduces a restricted variant of JavaScript that eliminates silent errors by throwing exceptions, disables features",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "strict-mode",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/strict-mode.js",
     "functionName": "demoStrictMode",
     "compatKey": "javascript.statements.strict_mode"
   },
@@ -15,7 +15,7 @@
     "description": "Adds functional programming methods directly to the Array prototype for traversing, mapping, filtering, and reducing arrays,",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "array-iteration-methods",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/array-methods.js",
     "functionName": "demoArrayMethods",
     "compatKey": "javascript.builtins.Array.filter"
   },
@@ -25,7 +25,7 @@
     "description": "Introduces `Date.now()` to get the current timestamp in milliseconds without instantiating a Date object,",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "date",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/date-enhancements.js",
     "functionName": "demoDateEnhancements",
     "compatKey": "javascript.builtins.Date.now"
   },
@@ -35,7 +35,7 @@
     "description": "Creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "functions",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/function-bind.js",
     "functionName": "demoFunctionBind",
     "compatKey": "javascript.builtins.Function.bind"
   },
@@ -45,7 +45,7 @@
     "description": "Standardizes a built-in `JSON` object for parsing JSON text strings into JavaScript objects and serializing",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "json",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/json.js",
     "functionName": "demoJSON",
     "compatKey": "javascript.builtins.JSON"
   },
@@ -55,7 +55,7 @@
     "description": "Introduces syntax for binding an object property to a function that will be invoked when that property is looked up (`get`)",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/getters-and-setters.js",
     "functionName": "demoGettersAndSetters",
     "compatKey": "javascript.operators.object_initializer.getter"
   },
@@ -65,7 +65,7 @@
     "description": "Enables precise control over object property attributes (`configurable`, `enumerable`, `writable`, `value`) via descriptors.",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/object-property-descriptors.js",
     "functionName": "demoObjectPropertyDescriptors",
     "compatKey": "javascript.builtins.Object.defineProperty"
   },
@@ -75,7 +75,7 @@
     "description": "Standardizes character access via square bracket notation (str[index]) as an alternative to charAt(index).",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "strings",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/string-indexing.js",
     "functionName": "demoStringIndexing",
     "compatKey": "javascript.builtins.String.bracket_access"
   },
@@ -85,7 +85,7 @@
     "description": "Strips leading and trailing whitespace from strings.",
     "esVersion": "ES5.1 (2011)",
     "webFeatureId": "strings",
-    "sampleFile": "samples/es2011.js",
+    "sampleFile": "samples/es2011/string-trim.js",
     "functionName": "demoStringTrim",
     "compatKey": "javascript.builtins.String.trim"
   },
@@ -95,7 +95,7 @@
     "description": "New collection types: Map (key-value pairs with arbitrary key types), Set (unique values),",
     "esVersion": "ES2015",
     "webFeatureId": "map",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/collections.js",
     "functionName": "demoCollections",
     "compatKey": "javascript.builtins.Map"
   },
@@ -105,7 +105,7 @@
     "description": "Block-scoped read-only constant declaration.",
     "esVersion": "ES2015",
     "webFeatureId": "let-const",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/const-declarations.js",
     "functionName": "demoConst",
     "compatKey": "javascript.statements.const"
   },
@@ -115,7 +115,7 @@
     "description": "Protocol for iterable objects (implementing `Symbol.iterator`) and the `for...of` loop to traverse iterable elements.",
     "esVersion": "ES2015",
     "webFeatureId": "iterators",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/iterators-and-for-of.js",
     "functionName": "demoForOfAndIterators",
     "compatKey": "javascript.statements.for_of"
   },
@@ -125,7 +125,7 @@
     "description": "A built-in object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.",
     "esVersion": "ES2015",
     "webFeatureId": "promise",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/promises.js",
     "functionName": "demoPromise",
     "compatKey": "javascript.builtins.Promise"
   },
@@ -135,7 +135,7 @@
     "description": "Direct syntax for binary literals (`0b` or `0B` prefix) and octal literals (`0o` or `0O` prefix).",
     "esVersion": "ES2015",
     "webFeatureId": "number",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/numeric-literals.js",
     "functionName": "demoNumericLiterals",
     "compatKey": "javascript.grammar.binary_numeric_literals"
   },
@@ -145,7 +145,7 @@
     "description": "Numerous method additions across Object (`Object.assign`, `Object.is`), Array (`Array.from`, `Array.of`, `find`, `findIndex`),",
     "esVersion": "ES2015",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/builtin-extensions.js",
     "functionName": "demoBuiltinExtensions",
     "compatKey": "javascript.builtins.Object.assign"
   },
@@ -155,7 +155,7 @@
     "description": "A unique and immutable primitive value that can be used as the key of an object property to avoid naming collisions.",
     "esVersion": "ES2015",
     "webFeatureId": "symbol",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/symbols.js",
     "functionName": "demoSymbols",
     "compatKey": "javascript.builtins.Symbol"
   },
@@ -165,7 +165,7 @@
     "description": "Multi-line string literals allowing embedded expressions via `${expression}` syntax, and tagged template",
     "esVersion": "ES2015",
     "webFeatureId": "template-literals",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/template-literals.js",
     "functionName": "demoTemplateLiterals",
     "compatKey": "javascript.grammar.template_literals"
   },
@@ -175,7 +175,7 @@
     "description": "Syntactic enhancements for object initializers including property value shorthand, method definition shorthand,",
     "esVersion": "ES2015",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/enhanced-object-literals.js",
     "functionName": "demoEnhancedObjectLiterals",
     "compatKey": "javascript.operators.object_initializer.shorthand_property_names"
   },
@@ -185,7 +185,7 @@
     "description": "Syntax allowing extraction of values from arrays or properties from objects into distinct variables,",
     "esVersion": "ES2015",
     "webFeatureId": "destructuring",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/destructuring.js",
     "functionName": "demoDestructuring",
     "compatKey": "javascript.operators.destructuring"
   },
@@ -195,7 +195,7 @@
     "description": "Determines whether an array includes a certain value among its entries, returning true or false.",
     "esVersion": "ES2016",
     "webFeatureId": "array-includes",
-    "sampleFile": "samples/es2016.js",
+    "sampleFile": "samples/es2016/array-includes.js",
     "functionName": "demoArrayIncludes",
     "compatKey": "javascript.builtins.Array.includes"
   },
@@ -205,7 +205,7 @@
     "description": "Provides a concise syntax for anonymous functions using the `=>` token. Arrow functions lexically bind",
     "esVersion": "ES2015",
     "webFeatureId": "functions",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/arrow-functions.js",
     "functionName": "add",
     "compatKey": "javascript.functions.arrow_functions"
   },
@@ -215,7 +215,7 @@
     "description": "Allows formal parameters to be initialized with default values if no value or `undefined` is passed.",
     "esVersion": "ES2015",
     "webFeatureId": "functions",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/parameters-and-spread.js",
     "functionName": "demoParametersAndSpread",
     "compatKey": "javascript.functions.default_parameters"
   },
@@ -225,7 +225,7 @@
     "description": "Functions defined with `function*` that can be paused and resumed using the `yield` keyword, returning a Generator object",
     "esVersion": "ES2015",
     "webFeatureId": "generators",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/generators.js",
     "functionName": "demoGenerator",
     "compatKey": "javascript.statements.generator_function"
   },
@@ -235,7 +235,7 @@
     "description": "Block-scoped variable declaration. Resides in the Temporal Dead Zone until evaluation.",
     "esVersion": "ES2015",
     "webFeatureId": "let-const",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/let-declarations.js",
     "functionName": "demoLet",
     "compatKey": "javascript.statements.let"
   },
@@ -245,7 +245,7 @@
     "description": "`Proxy` allows intercepting and defining custom behavior for fundamental object operations (property lookup, assignment, enumeration, etc.).",
     "esVersion": "ES2015",
     "webFeatureId": "proxy-reflect",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/proxy-and-reflect.js",
     "functionName": "demoProxyAndReflect",
     "compatKey": "javascript.builtins.Proxy"
   },
@@ -255,7 +255,7 @@
     "description": "Extends iterator objects with functional programming methods similar to Array prototype methods, enabling lazy,",
     "esVersion": "ES2025",
     "webFeatureId": "iterators",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/iterator-helpers.js",
     "functionName": "demoIteratorHelpers",
     "compatKey": "javascript.builtins.Iterator"
   },
@@ -265,7 +265,7 @@
     "description": "Introduces class syntax as syntactic sugar over prototype-based inheritance, including constructors,",
     "esVersion": "ES2015",
     "webFeatureId": "class-syntax",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/classes.js",
     "functionName": "Animal",
     "compatKey": "javascript.statements.class"
   },
@@ -275,7 +275,7 @@
     "description": "An infix operator for exponentiation, providing a cleaner shorthand for `Math.pow(base, exponent)`.",
     "esVersion": "ES2016",
     "webFeatureId": "exponentiation",
-    "sampleFile": "samples/es2016.js",
+    "sampleFile": "samples/es2016/exponentiation-operator.js",
     "functionName": "demoExponentiationOperator",
     "compatKey": "javascript.operators.exponentiation"
   },
@@ -285,7 +285,7 @@
     "description": "Returns an array of a given object's own enumerable string-keyed property [key, value] pairs.",
     "esVersion": "ES2017",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/object-entries.js",
     "functionName": "demoObjectEntries",
     "compatKey": "javascript.builtins.Object.entries"
   },
@@ -295,7 +295,7 @@
     "description": "Returns an array of a given object's own enumerable string-keyed property values.",
     "esVersion": "ES2017",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/object-values.js",
     "functionName": "demoObjectValues",
     "compatKey": "javascript.builtins.Object.values"
   },
@@ -305,7 +305,7 @@
     "description": "Provides syntactic sugar over Promises, allowing asynchronous operations to be written in a synchronous, procedural style.",
     "esVersion": "ES2017",
     "webFeatureId": "async-await",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/async-await.js",
     "functionName": "demoAsyncAwait",
     "compatKey": "javascript.operators.async_function"
   },
@@ -315,7 +315,7 @@
     "description": "Returns all own property descriptors of a given object, enabling accurate cloning of objects including getters, setters,",
     "esVersion": "ES2017",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/get-own-property-descriptors.js",
     "functionName": "demoGetOwnPropertyDescriptors",
     "compatKey": "javascript.builtins.Object.getOwnPropertyDescriptors"
   },
@@ -325,7 +325,7 @@
     "description": "Pads the current string from the end with another string until the target length is reached.",
     "esVersion": "ES2017",
     "webFeatureId": "string-pad",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/string-pad-end.js",
     "functionName": "demoStringPadEnd",
     "compatKey": "javascript.builtins.String.padEnd"
   },
@@ -335,7 +335,7 @@
     "description": "Pads the current string from the start with another string until the target length is reached.",
     "esVersion": "ES2017",
     "webFeatureId": "string-pad",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/string-pad-start.js",
     "functionName": "demoStringPadStart",
     "compatKey": "javascript.builtins.String.padStart"
   },
@@ -345,7 +345,7 @@
     "description": "Allows trailing commas in function definitions and function calls, making git diffs cleaner when adding new parameters.",
     "esVersion": "ES2017",
     "webFeatureId": "functions",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/trailing-commas.js",
     "functionName": "demoTrailingCommas",
     "compatKey": "javascript.grammar.trailing_commas.trailing_commas_in_functions"
   },
@@ -355,7 +355,7 @@
     "description": "Native syntax for modular programming using `export` and `import` declarations.",
     "esVersion": "ES2015",
     "webFeatureId": "js-modules",
-    "sampleFile": "samples/es2015.js",
+    "sampleFile": "samples/es2015/modules.js",
     "functionName": "moduleFeatureDemo",
     "compatKey": "javascript.statements.import"
   },
@@ -365,7 +365,7 @@
     "description": "Registers a callback to be invoked when a Promise settles (either fulfilled or rejected), enabling cleanup operations",
     "esVersion": "ES2018",
     "webFeatureId": "promise-finally",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/promise-finally.js",
     "functionName": "demoPromiseFinally",
     "compatKey": "javascript.builtins.Promise.finally"
   },
@@ -375,7 +375,7 @@
     "description": "Introduces `async function*` for generating asynchronous sequences of data, and the `for await...of` loop",
     "esVersion": "ES2018",
     "webFeatureId": "async-iterators",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/async-iteration.js",
     "functionName": "demoAsyncGenerator",
     "compatKey": "javascript.statements.for_await_of"
   },
@@ -385,7 +385,7 @@
     "description": "Extends the rest/spread syntax (`...`) to object literals. Rest properties collect remaining own enumerable",
     "esVersion": "ES2018",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/object-rest-spread.js",
     "functionName": "demoObjectRestSpread",
     "compatKey": "javascript.operators.object_initializer.spread_properties"
   },
@@ -395,7 +395,7 @@
     "description": "Lifts restrictions on syntactic escape sequences within tagged template literals. Invalid escape sequences (e.g., `\\unicode`)",
     "esVersion": "ES2018",
     "webFeatureId": "template-literals",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/template-literal-revision.js",
     "functionName": "demoTemplateLiteralRevision",
     "compatKey": "javascript.grammar.template_literals.template_literal_revision"
   },
@@ -405,7 +405,7 @@
     "description": "Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
     "esVersion": "ES2019",
     "webFeatureId": "array-flat",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/array-flat.js",
     "functionName": "demoArrayFlat",
     "compatKey": "javascript.builtins.Array.flat"
   },
@@ -415,7 +415,7 @@
     "description": "Maps each element using a mapping function, then flattens the result into a new array by depth 1.",
     "esVersion": "ES2019",
     "webFeatureId": "array-flat",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/array-flat-map.js",
     "functionName": "demoArrayFlatMap",
     "compatKey": "javascript.builtins.Array.flatMap"
   },
@@ -425,7 +425,7 @@
     "description": "Transforms a list of key-value pairs (such as a Map or an array of `[key, value]` arrays) into an object.",
     "esVersion": "ES2019",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/object-from-entries.js",
     "functionName": "demoObjectFromEntries",
     "compatKey": "javascript.builtins.Object.fromEntries"
   },
@@ -435,7 +435,7 @@
     "description": "Allows omitting the exception binding variable in `catch` blocks when the thrown error object is not needed.",
     "esVersion": "ES2019",
     "webFeatureId": "optional-catch-binding",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/optional-catch-binding.js",
     "functionName": "demoOptionalCatchBinding",
     "compatKey": "javascript.statements.try.optional_catch_binding"
   },
@@ -445,7 +445,7 @@
     "description": "Mandates that `Array.prototype.sort()` be stable, ensuring that array elements comparing equal retain their original order.",
     "esVersion": "ES2019",
     "webFeatureId": "stable-array-sort",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/stable-sort.js",
     "functionName": "demoStableSort",
     "compatKey": "javascript.builtins.Array.sort.stable_sorting"
   },
@@ -455,7 +455,7 @@
     "description": "Removes whitespace from the end of a string.",
     "esVersion": "ES2019",
     "webFeatureId": "string-trim-startend",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/string-trim-end.js",
     "functionName": "demoStringTrimEnd",
     "compatKey": "javascript.builtins.String.trimEnd"
   },
@@ -465,7 +465,7 @@
     "description": "Removes whitespace from the beginning (start) of a string.",
     "esVersion": "ES2019",
     "webFeatureId": "string-trim-startend",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/string-trim-start.js",
     "functionName": "demoStringTrimStart",
     "compatKey": "javascript.builtins.String.trimStart"
   },
@@ -475,7 +475,7 @@
     "description": "A read-only property returning the optional string description specified when creating a Symbol object, directly",
     "esVersion": "ES2019",
     "webFeatureId": "symbol",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/symbol-description.js",
     "functionName": "demoSymbolDescription",
     "compatKey": "javascript.builtins.Symbol.description"
   },
@@ -485,7 +485,7 @@
     "description": "Prevents `JSON.stringify` from returning ill-formed UTF-16 strings when encountering lone surrogate code points (U+D800 to U+DFFF),",
     "esVersion": "ES2019",
     "webFeatureId": "json",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/well-formed-json.js",
     "functionName": "demoWellFormedJSON",
     "compatKey": "javascript.builtins.JSON.stringify.well_formed_stringify"
   },
@@ -495,7 +495,7 @@
     "description": "Function-like syntax allowing asynchronous, on-demand module loading at runtime, returning a Promise that resolves",
     "esVersion": "ES2020",
     "webFeatureId": "js-modules",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/dynamic-import.js",
     "functionName": "demoDynamicImport",
     "compatKey": "javascript.operators.import"
   },
@@ -505,7 +505,7 @@
     "description": "Provides a universal standard mechanism to access the global `this` value across different JavaScript environments",
     "esVersion": "ES2020",
     "webFeatureId": "globalthis",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/global-this.js",
     "functionName": "demoGlobalThis",
     "compatKey": "javascript.builtins.globalThis"
   },
@@ -515,7 +515,7 @@
     "description": "An object exposing context-specific metadata to a JavaScript module, such as the URL of the current module (`import.meta.url`).",
     "esVersion": "ES2020",
     "webFeatureId": "js-modules",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/import-meta.js",
     "functionName": "demoImportMeta",
     "compatKey": "javascript.operators.import_meta"
   },
@@ -525,7 +525,7 @@
     "description": "Returns an iterator of all results matching a string against a regular expression (which must have the `g` flag),",
     "esVersion": "ES2020",
     "webFeatureId": "string-matchall",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/string-match-all.js",
     "functionName": "demoMatchAll",
     "compatKey": "javascript.builtins.String.matchAll"
   },
@@ -535,7 +535,7 @@
     "description": "Standardizes syntax stripping for executable scripts starting with `#!` (hashbang/shebang) on the very first line",
     "esVersion": "ES2023",
     "webFeatureId": "hashbang-comments",
-    "sampleFile": "samples/es2023.js",
+    "sampleFile": "samples/es2023/hashbang.js",
     "functionName": "hashbangDemo",
     "compatKey": "javascript.grammar.hashbang_comments"
   },
@@ -545,7 +545,7 @@
     "description": "Allows capturing groups in regular expressions to be assigned explicit names via `(?<name>...)`, which can then be",
     "esVersion": "ES2018",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/regexp-named-capture-groups.js",
     "functionName": "demoNamedCaptureGroups",
     "compatKey": "javascript.regular_expressions.named_capturing_group"
   },
@@ -555,7 +555,7 @@
     "description": "Introduces the `s` flag for regular expressions, which alters the dot (`.`) metacharacter to match any character,",
     "esVersion": "ES2018",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/regexp-dot-all-flag.js",
     "functionName": "demoDotAllFlag",
     "compatKey": "javascript.builtins.RegExp.dotAll"
   },
@@ -565,7 +565,7 @@
     "description": "Enables matching characters based on Unicode character properties inside regular expressions using `\\p{...}` and `\\P{...}`",
     "esVersion": "ES2018",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/regexp-unicode-property-escapes.js",
     "functionName": "demoUnicodePropertyEscapes",
     "compatKey": "javascript.regular_expressions.unicode_character_class_escape"
   },
@@ -575,7 +575,7 @@
     "description": "A logical operator returning its right-hand operand when its left-hand operand is `null` or `undefined`,",
     "esVersion": "ES2020",
     "webFeatureId": "nullish-coalescing",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/nullish-coalescing.js",
     "functionName": "demoNullishCoalescing",
     "compatKey": "javascript.operators.nullish_coalescing"
   },
@@ -585,7 +585,7 @@
     "description": "Allows reading the value of a property located deep within a chain of connected objects without having to",
     "esVersion": "ES2020",
     "webFeatureId": "object-object",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/optional-chaining.js",
     "functionName": "demoOptionalChaining",
     "compatKey": "javascript.operators.optional_chaining"
   },
@@ -595,7 +595,7 @@
     "description": "Returns a promise that resolves after all of the given promises have either fulfilled or rejected, with an array of objects",
     "esVersion": "ES2020",
     "webFeatureId": "promise-allsettled",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/promise-all-settled.js",
     "functionName": "demoPromiseAllSettled",
     "compatKey": "javascript.builtins.Promise.allSettled"
   },
@@ -605,7 +605,7 @@
     "description": "Allows underscores (`_`) as visual separators within numeric literals (decimal, binary, hex, octal, BigInt)",
     "esVersion": "ES2021",
     "webFeatureId": "numeric-separators",
-    "sampleFile": "samples/es2021.js",
+    "sampleFile": "samples/es2021/numeric-separators.js",
     "functionName": "demoNumericSeparators",
     "compatKey": "javascript.grammar.numeric_separators"
   },
@@ -615,7 +615,7 @@
     "description": "Returns a new string with all matches of a pattern (either a string or a RegExp with `g` flag) replaced by a replacement.",
     "esVersion": "ES2021",
     "webFeatureId": "string-replaceall",
-    "sampleFile": "samples/es2021.js",
+    "sampleFile": "samples/es2021/string-replace-all.js",
     "functionName": "demoReplaceAll",
     "compatKey": "javascript.builtins.String.replaceAll"
   },
@@ -625,7 +625,7 @@
     "description": "Introduces a new numeric primitive type `BigInt` for representing integers of arbitrary magnitude,",
     "esVersion": "ES2020",
     "webFeatureId": "bigint",
-    "sampleFile": "samples/es2020.js",
+    "sampleFile": "samples/es2020/bigint.js",
     "functionName": "demoBigInt",
     "compatKey": "javascript.builtins.BigInt"
   },
@@ -635,7 +635,7 @@
     "description": "Combines logical operations with assignment. The assignment only occurs if the logical condition evaluates to",
     "esVersion": "ES2021",
     "webFeatureId": "logical-assignments",
-    "sampleFile": "samples/es2021.js",
+    "sampleFile": "samples/es2021/logical-assignment.js",
     "functionName": "demoLogicalAssignment",
     "compatKey": "javascript.operators.logical_or_assignment"
   },
@@ -645,7 +645,7 @@
     "description": "`Promise.any()` takes an iterable of Promise objects and resolves as soon as any of the promises fulfills.",
     "esVersion": "ES2021",
     "webFeatureId": "promise-any",
-    "sampleFile": "samples/es2021.js",
+    "sampleFile": "samples/es2021/promise-any.js",
     "functionName": "demoPromiseAny",
     "compatKey": "javascript.builtins.Promise.any"
   },
@@ -655,7 +655,7 @@
     "description": "`WeakRef` holds a weak reference to an object, allowing it to be garbage collected without preventing reclamation.",
     "esVersion": "ES2021",
     "webFeatureId": "weak-references",
-    "sampleFile": "samples/es2021.js",
+    "sampleFile": "samples/es2021/weak-ref-and-registry.js",
     "functionName": "demoWeakRefAndRegistry",
     "compatKey": "javascript.builtins.WeakRef"
   },
@@ -665,7 +665,7 @@
     "description": "Allows specifying an underlying error cause via the `{ cause: err }` options object passed to Error constructors,",
     "esVersion": "ES2022",
     "webFeatureId": "error-cause",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/error-cause.js",
     "functionName": "demoErrorCause",
     "compatKey": "javascript.builtins.Error.cause"
   },
@@ -675,7 +675,7 @@
     "description": "Allows checking whether a specific private field or method is present on an object using the `in` operator,",
     "esVersion": "ES2022",
     "webFeatureId": "class-syntax",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/private-field-check.js",
     "functionName": "SecureBox",
     "compatKey": "javascript.classes.private_class_fields_in"
   },
@@ -685,7 +685,7 @@
     "description": "Introduces the `/.../d` regex flag, which instructs regex execution methods (`exec`, `matchAll`) to include an `indices`",
     "esVersion": "ES2022",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/regexp-match-indices.js",
     "functionName": "demoMatchIndices",
     "compatKey": "javascript.builtins.RegExp.hasIndices"
   },
@@ -695,7 +695,7 @@
     "description": "Introduces `SharedArrayBuffer` for sharing memory across worker threads, and the `Atomics` namespace object",
     "esVersion": "ES2017",
     "webFeatureId": "shared-memory",
-    "sampleFile": "samples/es2017.js",
+    "sampleFile": "samples/es2017/shared-memory-and-atomics.js",
     "functionName": "demoSharedMemoryAndAtomics",
     "compatKey": "javascript.builtins.SharedArrayBuffer"
   },
@@ -705,7 +705,7 @@
     "description": "Takes an integer value and returns the item at that index, allowing positive integers for indexing from the start",
     "esVersion": "ES2022",
     "webFeatureId": "array-at",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/at-method.js",
     "functionName": "demoAtMethod",
     "compatKey": "javascript.builtins.Array.at"
   },
@@ -715,7 +715,7 @@
     "description": "A static method that returns true if the specified object has the indicated property as its own property.",
     "esVersion": "ES2022",
     "webFeatureId": "object-hasown",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/object-has-own.js",
     "functionName": "demoObjectHasOwn",
     "compatKey": "javascript.builtins.Object.hasOwn"
   },
@@ -725,7 +725,7 @@
     "description": "Iterates through an array in reverse order to find the value of the first element satisfying the predicate.",
     "esVersion": "ES2023",
     "webFeatureId": "array-findlast",
-    "sampleFile": "samples/es2023.js",
+    "sampleFile": "samples/es2023/array-find-last.js",
     "functionName": "demoArrayFindLast",
     "compatKey": "javascript.builtins.Array.findLast"
   },
@@ -735,7 +735,7 @@
     "description": "Iterates through an array in reverse order to find the index of the first element satisfying the predicate.",
     "esVersion": "ES2023",
     "webFeatureId": "array-findlast",
-    "sampleFile": "samples/es2023.js",
+    "sampleFile": "samples/es2023/array-find-last-index.js",
     "functionName": "demoArrayFindLastIndex",
     "compatKey": "javascript.builtins.Array.findLastIndex"
   },
@@ -745,7 +745,7 @@
     "description": "Extends classes with declarative instance and static fields without requiring constructor initialization, along with",
     "esVersion": "ES2022",
     "webFeatureId": "class-syntax",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/class-fields.js",
     "functionName": "Counter",
     "compatKey": "javascript.classes.public_class_fields"
   },
@@ -755,7 +755,7 @@
     "description": "Enables positive `(?<=...)` and negative `(?<!...)` lookbehind assertions, matching a pattern only if it is (or is not)",
     "esVersion": "ES2018",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2018.js",
+    "sampleFile": "samples/es2018/regexp-lookbehind-assertions.js",
     "functionName": "demoLookbehindAssertions",
     "compatKey": "javascript.regular_expressions.lookbehind_assertion"
   },
@@ -765,7 +765,7 @@
     "description": "Introduces `static { ... }` blocks within class bodies to evaluate complex static initialization logic with access",
     "esVersion": "ES2022",
     "webFeatureId": "class-syntax",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/class-static-initialization-blocks.js",
     "functionName": "ConfigManager",
     "compatKey": "javascript.classes.static.initialization_blocks"
   },
@@ -775,7 +775,7 @@
     "description": "Introduces non-mutating equivalents to traditional Array/TypedArray mutators. Instead of modifying the array in place,",
     "esVersion": "ES2023",
     "webFeatureId": "array-by-copy",
-    "sampleFile": "samples/es2023.js",
+    "sampleFile": "samples/es2023/change-by-copy.js",
     "functionName": "demoChangeByCopy",
     "compatKey": "javascript.builtins.Array.toSorted"
   },
@@ -785,7 +785,7 @@
     "description": "Requires `Function.prototype.toString()` to return the exact source code text slice used to define the function,",
     "esVersion": "ES2019",
     "webFeatureId": "functions",
-    "sampleFile": "samples/es2019.js",
+    "sampleFile": "samples/es2019/function-to-string.js",
     "functionName": "demoFunctionToString",
     "compatKey": "javascript.builtins.Function.toString.toString_revision"
   },
@@ -795,7 +795,7 @@
     "description": "An upgrade over the `u` flag (`/pattern/v`) that enables set notation and operations within character classes,",
     "esVersion": "ES2024",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/regexp-v-flag.js",
     "functionName": "demoRegExpVFlag",
     "compatKey": "javascript.builtins.RegExp.unicodeSets"
   },
@@ -805,7 +805,7 @@
     "description": "`.isWellFormed()` checks whether a string contains lone surrogate code points (which would make it ill-formed UTF-16).",
     "esVersion": "ES2024",
     "webFeatureId": "string-wellformed",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/string-well-formedness.js",
     "functionName": "demoStringWellFormedness",
     "compatKey": "javascript.builtins.String.isWellFormed"
   },
@@ -815,7 +815,7 @@
     "description": "Groups elements of an iterable according to arbitrary keys returned by a callback function into a Map.",
     "esVersion": "ES2024",
     "webFeatureId": "array-group",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/map-group-by.js",
     "functionName": "demoMapGroupBy",
     "compatKey": "javascript.builtins.Map.groupBy"
   },
@@ -825,7 +825,7 @@
     "description": "Groups elements of an iterable according to string/symbol keys returned by a callback function.",
     "esVersion": "ES2024",
     "webFeatureId": "array-group",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/object-group-by.js",
     "functionName": "demoObjectGroupBy",
     "compatKey": "javascript.builtins.Object.groupBy"
   },
@@ -835,7 +835,7 @@
     "description": "A static method returning an object containing a new Promise along with its associated `resolve` and `reject`",
     "esVersion": "ES2024",
     "webFeatureId": "promise-withresolvers",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/promise-with-resolvers.js",
     "functionName": "demoPromiseWithResolvers",
     "compatKey": "javascript.builtins.Promise.withResolvers"
   },
@@ -845,7 +845,7 @@
     "description": "Standardizes mathematical set operations natively on `Set` instances, returning new Set objects with the computed results",
     "esVersion": "ES2025",
     "webFeatureId": "set-methods",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/set-methods.js",
     "functionName": "demoSetMethods",
     "compatKey": "javascript.builtins.Set.intersection"
   },
@@ -855,7 +855,7 @@
     "description": "Introduces `maxByteLength` option for creating resizable ArrayBuffers, along with `.resize()` to change size in place",
     "esVersion": "ES2024",
     "webFeatureId": "resizable-buffers",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/array-buffer-resize-and-transfer.js",
     "functionName": "demoArrayBufferResizeAndTransfer",
     "compatKey": "javascript.builtins.ArrayBuffer.resizable"
   },
@@ -865,7 +865,7 @@
     "description": "Allows multiple capture groups in different alternatives of a regular expression (separated by `|`) to share the exact",
     "esVersion": "ES2025",
     "webFeatureId": "regexp",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/regexp-duplicate-named-capture-groups.js",
     "functionName": "demoDuplicateNamedCaptureGroups",
     "compatKey": "javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups"
   },
@@ -875,7 +875,7 @@
     "description": "Wraps synchronous or asynchronous function execution inside a Promise, ensuring that any exceptions thrown synchronously",
     "esVersion": "ES2025",
     "webFeatureId": "promise-try",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/promise-try.js",
     "functionName": "demoPromiseTry",
     "compatKey": "javascript.builtins.Promise.try"
   },
@@ -885,7 +885,7 @@
     "description": "A micro-architectural CPU instruction hint for spinlocks and busy-waiting loops in multithreaded environments.",
     "esVersion": "ES2026",
     "webFeatureId": "atomics-pause",
-    "sampleFile": "samples/es2026.js",
+    "sampleFile": "samples/es2026/atomics-pause.js",
     "functionName": "demoAtomicsPause",
     "compatKey": "javascript.builtins.Atomics.pause"
   },
@@ -895,7 +895,7 @@
     "description": "Introduces 16-bit half-precision floating point number support via `Float16Array` typed arrays and `Math.f16round()`",
     "esVersion": "ES2025",
     "webFeatureId": "float16array",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/float16.js",
     "functionName": "demoFloat16",
     "compatKey": "javascript.builtins.Float16Array"
   },
@@ -905,7 +905,7 @@
     "description": "Provides inline syntax for specifying module import assertions/attributes using the `with` keyword, informing runtime",
     "esVersion": "ES2025",
     "webFeatureId": "js-modules",
-    "sampleFile": "samples/es2025.js",
+    "sampleFile": "samples/es2025/import-attributes.js",
     "functionName": "demoImportAttributes",
     "compatKey": "javascript.statements.import.import_attributes"
   },
@@ -915,7 +915,7 @@
     "description": "A static method that escapes special regular expression syntax characters within a string, allowing user-supplied",
     "esVersion": "ES2026",
     "webFeatureId": "regexp-escape",
-    "sampleFile": "samples/es2026.js",
+    "sampleFile": "samples/es2026/regexp-escape.js",
     "functionName": "demoRegExpEscape",
     "compatKey": "javascript.builtins.RegExp.escape"
   },
@@ -925,7 +925,7 @@
     "description": "Standardizes native conversion methods on `Uint8Array` for encoding byte buffers to hexadecimal (`toHex`) and Base64 (`toBase64`)",
     "esVersion": "ES2026",
     "webFeatureId": "uint8array-base64-hex",
-    "sampleFile": "samples/es2026.js",
+    "sampleFile": "samples/es2026/uint8array-encoding.js",
     "functionName": "demoUint8ArrayEncoding",
     "compatKey": "javascript.builtins.Uint8Array.toBase64"
   },
@@ -935,7 +935,7 @@
     "description": "Asynchronous version of `Atomics.wait()`, returning a Promise that resolves when a shared memory location is notified or times out.",
     "esVersion": "ES2024",
     "webFeatureId": "atomics-wait-async",
-    "sampleFile": "samples/es2024.js",
+    "sampleFile": "samples/es2024/atomics-wait-async.js",
     "functionName": "demoAtomicsWaitAsync",
     "compatKey": "javascript.builtins.Atomics.waitAsync"
   },
@@ -945,7 +945,7 @@
     "description": "Expands `WeakMap` keys and `WeakSet` values to allow non-registered Symbol primitives (symbols created with `Symbol()`",
     "esVersion": "ES2023",
     "webFeatureId": "weakmap",
-    "sampleFile": "samples/es2023.js",
+    "sampleFile": "samples/es2023/symbols-as-weak-keys.js",
     "functionName": "demoSymbolsAsWeakKeys",
     "compatKey": "javascript.builtins.WeakMap.symbol_as_keys"
   },
@@ -955,7 +955,7 @@
     "description": "Computes the exact floating-point sum of an iterable of numbers without losing precision from intermediate floating-point",
     "esVersion": "ES2026",
     "webFeatureId": "math-sum-precise",
-    "sampleFile": "samples/es2026.js",
+    "sampleFile": "samples/es2026/math-sum-precise.js",
     "functionName": "demoMathSumPrecise",
     "compatKey": "javascript.builtins.Math.sumPrecise"
   },
@@ -965,7 +965,7 @@
     "description": "Enables the use of `await` directly at the top level of an ES module outside of any async function, pausing module evaluation",
     "esVersion": "ES2022",
     "webFeatureId": "async-await",
-    "sampleFile": "samples/es2022.js",
+    "sampleFile": "samples/es2022/top-level-await.js",
     "functionName": "topLevelAwaitDemo",
     "compatKey": "javascript.operators.await.top_level"
   },
@@ -975,7 +975,7 @@
     "description": "A static method that reliably detects whether a value is an Error instance (including built-in errors, custom subclasses,",
     "esVersion": "ES2026",
     "webFeatureId": "is-error",
-    "sampleFile": "samples/es2026.js",
+    "sampleFile": "samples/es2026/error-is-error.js",
     "functionName": "demoErrorIsError",
     "compatKey": "javascript.builtins.Error.isError"
   }

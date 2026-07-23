@@ -8,8 +8,8 @@
     ".": "./samples/index.js",
     "./samples": "./samples/index.js",
     "./samples/index.js": "./samples/index.js",
-    "./samples/*": "./samples/*.js",
-    "./*": "./samples/*.js"
+    "./samples/*": "./samples/*",
+    "./*": "./samples/*"
   },
   "scripts": {
     "build:features": "node scripts/build-features.js",

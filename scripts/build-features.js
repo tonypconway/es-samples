@@ -187,16 +187,32 @@ export function syncManifest() {
     }
   }
 
-  const sampleFiles = fs.readdirSync(samplesDir)
-    .filter(f => /^es\d{4}\.js$/.test(f))
-    .sort();
+  const sampleFiles = [];
+  const entries = fs.readdirSync(samplesDir);
+  for (const entry of entries) {
+    const entryPath = path.join(samplesDir, entry);
+    const stat = fs.statSync(entryPath);
+    if (stat.isDirectory() && /^es\d{4}$/.test(entry)) {
+      const subFiles = fs.readdirSync(entryPath)
+        .filter(f => f.endsWith('.js'))
+        .sort();
+      for (const subFile of subFiles) {
+        sampleFiles.push(`${entry}/${subFile}`);
+      }
+    } else if (stat.isFile() && /^es\d{4}\.js$/.test(entry)) {
+      sampleFiles.push(entry);
+    }
+  }
+  sampleFiles.sort();
 
   const activeFnNames = new Set();
 
   for (const file of sampleFiles) {
     const filePath = path.join(samplesDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
-    const esVersion = EDITION_MAP[file] || file.replace('.js', '').toUpperCase();
+    const rootFileMatch = file.match(/^es\d{4}/);
+    const mapKey = rootFileMatch ? `${rootFileMatch[0]}.js` : file;
+    const esVersion = EDITION_MAP[mapKey] || mapKey.replace('.js', '').toUpperCase();
 
     // Regex to match comments followed by export declarations
     const blockRegex = /\/\*([^*]|\*(?!\/))*\*\/\s*export\s+(?:function\*?|class|const|async function\*?)\s+([a-zA-Z0-9_$]+)/g;
