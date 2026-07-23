@@ -11,28 +11,6 @@
     "category": "syntax"
   },
   {
-    "id": "array-iteration-methods",
-    "name": "Array Iteration Methods",
-    "description": "Adds functional programming methods directly to the Array prototype for traversing, mapping, filtering, and reducing arrays, along with the static `Array.isArray()` method to reliably differentiate arrays from other objects.",
-    "esVersion": "ES5.1 (2011)",
-    "webFeatureId": "array-iteration-methods",
-    "sampleFile": "samples/es2011/array-methods.js",
-    "functionName": "demoArrayMethods",
-    "compatKey": "javascript.builtins.Array.filter",
-    "category": "method"
-  },
-  {
-    "id": "date-now-and-date-iso-json-formatting",
-    "name": "Date.now() and Date ISO/JSON Formatting",
-    "description": "Introduces `Date.now()` to get the current timestamp in milliseconds without instantiating a Date object, along with standard `.toISOString()` and `.toJSON()` serialization methods.",
-    "esVersion": "ES5.1 (2011)",
-    "webFeatureId": "date",
-    "sampleFile": "samples/es2011/date-enhancements.js",
-    "functionName": "demoDateEnhancements",
-    "compatKey": "javascript.builtins.Date.now",
-    "category": "api"
-  },
-  {
     "id": "function-prototype-bind",
     "name": "Function.prototype.bind",
     "description": "Creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.",
@@ -66,17 +44,6 @@
     "category": "syntax"
   },
   {
-    "id": "property-descriptors-and-object-reflection",
-    "name": "Property Descriptors and Object Reflection",
-    "description": "Enables precise control over object property attributes (`configurable`, `enumerable`, `writable`, `value`) via descriptors. Also adds object meta-operations like `Object.keys()`, `Object.create()`, and immutability controls (`freeze`, `seal`).",
-    "esVersion": "ES5.1 (2011)",
-    "webFeatureId": "object-object",
-    "sampleFile": "samples/es2011/object-property-descriptors.js",
-    "functionName": "demoObjectPropertyDescriptors",
-    "compatKey": "javascript.builtins.Object.defineProperty",
-    "category": "api"
-  },
-  {
     "id": "string-property-access",
     "name": "String Property Access",
     "description": "Standardizes character access via square bracket notation (str[index]) as an alternative to charAt(index).",
@@ -97,17 +64,6 @@
     "functionName": "demoStringTrim",
     "compatKey": "javascript.builtins.String.trim",
     "category": "method"
-  },
-  {
-    "id": "built-in-collections-map-set-weakmap-and-weakset",
-    "name": "Built-in Collections: Map, Set, WeakMap, and WeakSet",
-    "description": "New collection types: Map (key-value pairs with arbitrary key types), Set (unique values), WeakMap (key-value pairs with weakly-held object keys), and WeakSet (weakly-held unique objects).",
-    "esVersion": "ES2015",
-    "webFeatureId": "map",
-    "sampleFile": "samples/es2015/collections.js",
-    "functionName": "demoCollections",
-    "compatKey": "javascript.builtins.Map",
-    "category": "api"
   },
   {
     "id": "const-declarations",
@@ -152,17 +108,6 @@
     "functionName": "demoNumericLiterals",
     "compatKey": "javascript.grammar.binary_numeric_literals",
     "category": "syntax"
-  },
-  {
-    "id": "enhanced-built-in-methods",
-    "name": "Enhanced Built-in Methods",
-    "description": "Numerous method additions across Object (`Object.assign`, `Object.is`), Array (`Array.from`, `Array.of`, `find`, `findIndex`), String (`includes`, `startsWith`, `endsWith`, `repeat`), Number (`Number.isNaN`, `Number.isInteger`), and Math (`Math.trunc`, `Math.sign`).",
-    "esVersion": "ES2015",
-    "webFeatureId": "object-object",
-    "sampleFile": "samples/es2015/builtin-extensions.js",
-    "functionName": "demoBuiltinExtensions",
-    "compatKey": "javascript.builtins.Object.assign",
-    "category": "api"
   },
   {
     "id": "symbol-primitive-type",
@@ -231,17 +176,6 @@
     "category": "syntax"
   },
   {
-    "id": "default-parameter-values-rest-parameters-and-spread-syntax",
-    "name": "Default Parameter Values, Rest Parameters, and Spread Syntax",
-    "description": "Allows formal parameters to be initialized with default values if no value or `undefined` is passed. Rest parameters (`...rest`) collect remaining arguments into an array. Spread syntax (`...iterable`) expands iterables.",
-    "esVersion": "ES2015",
-    "webFeatureId": "functions",
-    "sampleFile": "samples/es2015/parameters-and-spread.js",
-    "functionName": "demoParametersAndSpread",
-    "compatKey": "javascript.functions.default_parameters",
-    "category": "syntax"
-  },
-  {
     "id": "generator-functions-and-yield-statement",
     "name": "Generator Functions and yield Statement",
     "description": "Functions defined with `function*` that can be paused and resumed using the `yield` keyword, returning a Generator object that conforms to both the iterable and iterator protocols.",
@@ -262,17 +196,6 @@
     "functionName": "demoLet",
     "compatKey": "javascript.statements.let",
     "category": "syntax"
-  },
-  {
-    "id": "proxy-and-reflect-objects",
-    "name": "Proxy and Reflect Objects",
-    "description": "`Proxy` allows intercepting and defining custom behavior for fundamental object operations (property lookup, assignment, enumeration, etc.). `Reflect` provides built-in static methods for interceptable JavaScript operations, mirroring Proxy traps.",
-    "esVersion": "ES2015",
-    "webFeatureId": "proxy-reflect",
-    "sampleFile": "samples/es2015/proxy-and-reflect.js",
-    "functionName": "demoProxyAndReflect",
-    "compatKey": "javascript.builtins.Proxy",
-    "category": "api"
   },
   {
     "id": "iterator-helpers",
@@ -704,28 +627,6 @@
     "category": "syntax"
   },
   {
-    "id": "promise-any-and-aggregateerror",
-    "name": "Promise.any() and AggregateError",
-    "description": "`Promise.any()` takes an iterable of Promise objects and resolves as soon as any of the promises fulfills. If all of the given promises are rejected, it rejects with an `AggregateError` grouping all individual errors.",
-    "esVersion": "ES2021",
-    "webFeatureId": "promise-any",
-    "sampleFile": "samples/es2021/promise-any.js",
-    "functionName": "demoPromiseAny",
-    "compatKey": "javascript.builtins.Promise.any",
-    "category": "api"
-  },
-  {
-    "id": "weakref-and-finalizationregistry",
-    "name": "WeakRef and FinalizationRegistry",
-    "description": "`WeakRef` holds a weak reference to an object, allowing it to be garbage collected without preventing reclamation. `FinalizationRegistry` provides a way to register custom cleanup callbacks to be invoked after an object is garbage collected.",
-    "esVersion": "ES2021",
-    "webFeatureId": "weak-references",
-    "sampleFile": "samples/es2021/weak-ref-and-registry.js",
-    "functionName": "demoWeakRefAndRegistry",
-    "compatKey": "javascript.builtins.WeakRef",
-    "category": "api"
-  },
-  {
     "id": "error-cause",
     "name": "Error Cause",
     "description": "Allows specifying an underlying error cause via the `{ cause: err }` options object passed to Error constructors, aiding error chaining and debugging across async architectural layers.",
@@ -757,17 +658,6 @@
     "functionName": "demoMatchIndices",
     "compatKey": "javascript.builtins.RegExp.hasIndices",
     "category": "syntax"
-  },
-  {
-    "id": "shared-memory-and-atomics",
-    "name": "Shared Memory and Atomics",
-    "description": "Introduces `SharedArrayBuffer` for sharing memory across worker threads, and the `Atomics` namespace object providing atomic operations (load, store, add, sub, exchange, wait, notify) for predictable thread synchronization.",
-    "esVersion": "ES2017",
-    "webFeatureId": "shared-memory",
-    "sampleFile": "samples/es2017/shared-memory-and-atomics.js",
-    "functionName": "demoSharedMemoryAndAtomics",
-    "compatKey": "javascript.builtins.SharedArrayBuffer",
-    "category": "api"
   },
   {
     "id": "at-method-on-indexable-objects",
@@ -847,17 +737,6 @@
     "category": "syntax"
   },
   {
-    "id": "change-by-copy-methods",
-    "name": "Change by Copy Methods",
-    "description": "Introduces non-mutating equivalents to traditional Array/TypedArray mutators. Instead of modifying the array in place, these methods return a new array copy with the transformations applied.",
-    "esVersion": "ES2023",
-    "webFeatureId": "array-by-copy",
-    "sampleFile": "samples/es2023/change-by-copy.js",
-    "functionName": "demoChangeByCopy",
-    "compatKey": "javascript.builtins.Array.toSorted",
-    "category": "method"
-  },
-  {
     "id": "function-prototype-tostring-revision",
     "name": "Function.prototype.toString() Revision",
     "description": "Requires `Function.prototype.toString()` to return the exact source code text slice used to define the function, preserving whitespace, comments, and syntax.",
@@ -878,17 +757,6 @@
     "functionName": "demoRegExpVFlag",
     "compatKey": "javascript.builtins.RegExp.unicodeSets",
     "category": "syntax"
-  },
-  {
-    "id": "string-well-formedness",
-    "name": "String Well-Formedness",
-    "description": "`.isWellFormed()` checks whether a string contains lone surrogate code points (which would make it ill-formed UTF-16). `.toWellFormed()` returns a new string where any lone surrogates are replaced with the Unicode replacement character U+FFFD.",
-    "esVersion": "ES2024",
-    "webFeatureId": "string-wellformed",
-    "sampleFile": "samples/es2024/string-well-formedness.js",
-    "functionName": "demoStringWellFormedness",
-    "compatKey": "javascript.builtins.String.isWellFormed",
-    "category": "method"
   },
   {
     "id": "map-groupby",
@@ -924,28 +792,6 @@
     "category": "api"
   },
   {
-    "id": "set-methods",
-    "name": "New Set Methods",
-    "description": "Standardizes mathematical set operations natively on `Set` instances, returning new Set objects with the computed results or boolean values for subset/superset/disjoint comparisons.",
-    "esVersion": "ES2025",
-    "webFeatureId": "set-methods",
-    "sampleFile": "samples/es2025/set-methods.js",
-    "functionName": "demoSetMethods",
-    "compatKey": "javascript.builtins.Set.intersection",
-    "category": "method"
-  },
-  {
-    "id": "resizable-and-transferable-arraybuffers",
-    "name": "Resizable and Transferable ArrayBuffers",
-    "description": "Introduces `maxByteLength` option for creating resizable ArrayBuffers, along with `.resize()` to change size in place and `.transfer()` to detach buffer ownership and move memory to a new ArrayBuffer without copying when possible.",
-    "esVersion": "ES2024",
-    "webFeatureId": "resizable-buffers",
-    "sampleFile": "samples/es2024/array-buffer-resize-and-transfer.js",
-    "functionName": "demoArrayBufferResizeAndTransfer",
-    "compatKey": "javascript.builtins.ArrayBuffer.resizable",
-    "category": "method"
-  },
-  {
     "id": "regexp-duplicate-named-capture-groups",
     "name": "RegExp Duplicate Named Capture Groups",
     "description": "Allows multiple capture groups in different alternatives of a regular expression (separated by `|`) to share the exact same group name (`(?<name>...)`), simplifying pattern matching across mutually exclusive branch formats.",
@@ -979,17 +825,6 @@
     "category": "api"
   },
   {
-    "id": "float16array-and-math-f16round",
-    "name": "Float16Array and Math.f16round",
-    "description": "Introduces 16-bit half-precision floating point number support via `Float16Array` typed arrays and `Math.f16round()` rounding method, optimizing memory footprint and GPU interoperability for machine learning and graphics workflows.",
-    "esVersion": "ES2025",
-    "webFeatureId": "float16array",
-    "sampleFile": "samples/es2025/float16.js",
-    "functionName": "demoFloat16",
-    "compatKey": "javascript.builtins.Float16Array",
-    "category": "api"
-  },
-  {
     "id": "import-attributes",
     "name": "Import Attributes",
     "description": "Provides inline syntax for specifying module import assertions/attributes using the `with` keyword, informing runtime module loaders how to interpret loaded resources (e.g., verifying a file is parsed as JSON rather than executed as code).",
@@ -1010,17 +845,6 @@
     "functionName": "demoRegExpEscape",
     "compatKey": "javascript.builtins.RegExp.escape",
     "category": "api"
-  },
-  {
-    "id": "uint8array-base64-and-hexadecimal-encoding-decoding",
-    "name": "Uint8Array Base64 and Hexadecimal Encoding/Decoding",
-    "description": "Standardizes native conversion methods on `Uint8Array` for encoding byte buffers to hexadecimal (`toHex`) and Base64 (`toBase64`) strings, as well as static constructors (`fromHex`, `fromBase64`) for parsing text strings back into byte arrays.",
-    "esVersion": "ES2026",
-    "webFeatureId": "uint8array-base64-hex",
-    "sampleFile": "samples/es2026/uint8array-encoding.js",
-    "functionName": "demoUint8ArrayEncoding",
-    "compatKey": "javascript.builtins.Uint8Array.toBase64",
-    "category": "method"
   },
   {
     "id": "atomics-waitasync",
@@ -1076,5 +900,742 @@
     "functionName": "demoErrorIsError",
     "compatKey": "javascript.builtins.Error.isError",
     "category": "api"
+  },
+  {
+    "id": "array-prototype-foreach",
+    "name": "Array.prototype.forEach",
+    "description": "Executes a provided function once for each array element.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-for-each.js",
+    "functionName": "demoArrayForEach",
+    "compatKey": "javascript.builtins.Array.forEach",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-map",
+    "name": "Array.prototype.map",
+    "description": "Creates a new array populated with the results of calling a provided function on every element in the calling array.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-map.js",
+    "functionName": "demoArrayMap",
+    "compatKey": "javascript.builtins.Array.map",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-filter",
+    "name": "Array.prototype.filter",
+    "description": "Creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-filter.js",
+    "functionName": "demoArrayFilter",
+    "compatKey": "javascript.builtins.Array.filter",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-reduce",
+    "name": "Array.prototype.reduce",
+    "description": "Executes a user-supplied reducer callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-reduce.js",
+    "functionName": "demoArrayReduce",
+    "compatKey": "javascript.builtins.Array.reduce",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-reduceright",
+    "name": "Array.prototype.reduceRight",
+    "description": "Applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-reduce-right.js",
+    "functionName": "demoArrayReduceRight",
+    "compatKey": "javascript.builtins.Array.reduceRight",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-some",
+    "name": "Array.prototype.some",
+    "description": "Tests whether at least one element in the array passes the test implemented by the provided function.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-some.js",
+    "functionName": "demoArraySome",
+    "compatKey": "javascript.builtins.Array.some",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-every",
+    "name": "Array.prototype.every",
+    "description": "Tests whether all elements in the array pass the test implemented by the provided function.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-every.js",
+    "functionName": "demoArrayEvery",
+    "compatKey": "javascript.builtins.Array.every",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-indexof",
+    "name": "Array.prototype.indexOf",
+    "description": "Returns the first index at which a given element can be found in the array, or -1 if it is not present.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-index-of.js",
+    "functionName": "demoArrayIndexof",
+    "compatKey": "javascript.builtins.Array.indexOf",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-lastindexof",
+    "name": "Array.prototype.lastIndexOf",
+    "description": "Returns the last index at which a given element can be found in the array, or -1 if it is not present.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-iteration-methods",
+    "sampleFile": "samples/es2011/array-last-index-of.js",
+    "functionName": "demoArrayLastIndexOf",
+    "compatKey": "javascript.builtins.Array.lastIndexOf",
+    "category": "method"
+  },
+  {
+    "id": "array-isarray",
+    "name": "Array.isArray",
+    "description": "Determines whether the passed value is an Array.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "array-isarray",
+    "sampleFile": "samples/es2011/array-is-array.js",
+    "functionName": "demoArrayIsArray",
+    "compatKey": "javascript.builtins.Array.isArray",
+    "category": "api"
+  },
+  {
+    "id": "date-now",
+    "name": "Date.now()",
+    "description": "Returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "date",
+    "sampleFile": "samples/es2011/date-now.js",
+    "functionName": "demoDateNow",
+    "compatKey": "javascript.builtins.Date.now",
+    "category": "api"
+  },
+  {
+    "id": "date-prototype-toisostring",
+    "name": "Date.prototype.toISOString",
+    "description": "Returns a string in simplified extended ISO format (ISO 8601), formatted as YYYY-MM-THH:mm:ss.sssZ.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "date",
+    "sampleFile": "samples/es2011/date-to-iso-string.js",
+    "functionName": "demoDateToISOString",
+    "compatKey": "javascript.builtins.Date.toISOString",
+    "category": "method"
+  },
+  {
+    "id": "date-prototype-tojson",
+    "name": "Date.prototype.toJSON",
+    "description": "Returns a string representation of the Date object used for JSON serialization.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "date",
+    "sampleFile": "samples/es2011/date-to-json.js",
+    "functionName": "demoDateToJSON",
+    "compatKey": "javascript.builtins.Date.toJSON",
+    "category": "method"
+  },
+  {
+    "id": "object-defineproperty",
+    "name": "Object.defineProperty",
+    "description": "Defines a new property directly on an object, or modifies an existing property on an object, and returns the object.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-define-property.js",
+    "functionName": "demoObjectDefineProperty",
+    "compatKey": "javascript.builtins.Object.defineProperty",
+    "category": "api"
+  },
+  {
+    "id": "object-create",
+    "name": "Object.create",
+    "description": "Creates a new object, using an existing object as the prototype of the newly created object.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-create.js",
+    "functionName": "demoObjectCreate",
+    "compatKey": "javascript.builtins.Object.create",
+    "category": "api"
+  },
+  {
+    "id": "object-keys",
+    "name": "Object.keys",
+    "description": "Returns an array of a given object's own enumerable property names.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-keys.js",
+    "functionName": "demoObjectKeys",
+    "compatKey": "javascript.builtins.Object.keys",
+    "category": "api"
+  },
+  {
+    "id": "object-freeze",
+    "name": "Object.freeze",
+    "description": "Freezes an object, preventing new properties from being added and existing properties from being modified or removed.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-freeze.js",
+    "functionName": "demoObjectFreeze",
+    "compatKey": "javascript.builtins.Object.freeze",
+    "category": "api"
+  },
+  {
+    "id": "object-seal",
+    "name": "Object.seal",
+    "description": "Seals an object, preventing new properties from being added and marking all existing properties as non-configurable.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-seal.js",
+    "functionName": "demoObjectSeal",
+    "compatKey": "javascript.builtins.Object.seal",
+    "category": "api"
+  },
+  {
+    "id": "object-preventextensions",
+    "name": "Object.preventExtensions",
+    "description": "Prevents new properties from ever being added to an object.",
+    "esVersion": "ES5.1 (2011)",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2011/object-prevent-extensions.js",
+    "functionName": "demoObjectPreventExtensions",
+    "compatKey": "javascript.builtins.Object.preventExtensions",
+    "category": "api"
+  },
+  {
+    "id": "object-assign",
+    "name": "Object.assign",
+    "description": "Copies all enumerable own properties from one or more source objects to a target object.",
+    "esVersion": "ES2015",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2015/object-assign.js",
+    "functionName": "demoObjectAssign",
+    "compatKey": "javascript.builtins.Object.assign",
+    "category": "api"
+  },
+  {
+    "id": "object-is",
+    "name": "Object.is",
+    "description": "Determines whether two values are the same value, correctly evaluating NaN and signed zeros.",
+    "esVersion": "ES2015",
+    "webFeatureId": "object-object",
+    "sampleFile": "samples/es2015/object-is.js",
+    "functionName": "demoObjectIs",
+    "compatKey": "javascript.builtins.Object.is",
+    "category": "api"
+  },
+  {
+    "id": "array-from",
+    "name": "Array.from",
+    "description": "Creates a new, shallow-copied Array instance from an iterable or array-like object.",
+    "esVersion": "ES2015",
+    "webFeatureId": "array-from",
+    "sampleFile": "samples/es2015/array-from.js",
+    "functionName": "demoArrayFrom",
+    "compatKey": "javascript.builtins.Array.from",
+    "category": "api"
+  },
+  {
+    "id": "array-of",
+    "name": "Array.of",
+    "description": "Creates a new Array instance from a variable number of arguments, regardless of number or type of arguments.",
+    "esVersion": "ES2015",
+    "webFeatureId": "array-of",
+    "sampleFile": "samples/es2015/array-of.js",
+    "functionName": "demoArrayOf",
+    "compatKey": "javascript.builtins.Array.of",
+    "category": "api"
+  },
+  {
+    "id": "array-prototype-find",
+    "name": "Array.prototype.find",
+    "description": "Returns the first element in the provided array that satisfies the provided testing function.",
+    "esVersion": "ES2015",
+    "webFeatureId": "array-find",
+    "sampleFile": "samples/es2015/array-find.js",
+    "functionName": "demoArrayFind",
+    "compatKey": "javascript.builtins.Array.find",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-findindex",
+    "name": "Array.prototype.findIndex",
+    "description": "Returns the index of the first element in an array that satisfies the provided testing function.",
+    "esVersion": "ES2015",
+    "webFeatureId": "array-find",
+    "sampleFile": "samples/es2015/array-find-index.js",
+    "functionName": "demoArrayFindIndex",
+    "compatKey": "javascript.builtins.Array.findIndex",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-includes",
+    "name": "String.prototype.includes",
+    "description": "Performs a case-sensitive search to determine whether one string may be found within another string.",
+    "esVersion": "ES2015",
+    "webFeatureId": "string-includes",
+    "sampleFile": "samples/es2015/string-includes.js",
+    "functionName": "demoStringIncludes",
+    "compatKey": "javascript.builtins.String.includes",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-startswith",
+    "name": "String.prototype.startsWith",
+    "description": "Determines whether a string begins with the characters of a specified string.",
+    "esVersion": "ES2015",
+    "webFeatureId": "string-starts-with-ends-with",
+    "sampleFile": "samples/es2015/string-starts-with.js",
+    "functionName": "demoStringStartsWith",
+    "compatKey": "javascript.builtins.String.startsWith",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-endswith",
+    "name": "String.prototype.endsWith",
+    "description": "Determines whether a string ends with the characters of a specified string.",
+    "esVersion": "ES2015",
+    "webFeatureId": "string-starts-with-ends-with",
+    "sampleFile": "samples/es2015/string-ends-with.js",
+    "functionName": "demoStringEndsWith",
+    "compatKey": "javascript.builtins.String.endsWith",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-repeat",
+    "name": "String.prototype.repeat",
+    "description": "Constructs and returns a new string which contains the specified number of copies of the string on which it was called.",
+    "esVersion": "ES2015",
+    "webFeatureId": "string-repeat",
+    "sampleFile": "samples/es2015/string-repeat.js",
+    "functionName": "demoStringRepeat",
+    "compatKey": "javascript.builtins.String.repeat",
+    "category": "method"
+  },
+  {
+    "id": "number-isnan",
+    "name": "Number.isNaN",
+    "description": "Determines whether the passed value is NaN without type coercion.",
+    "esVersion": "ES2015",
+    "webFeatureId": "number",
+    "sampleFile": "samples/es2015/number-is-nan.js",
+    "functionName": "demoNumberIsNaN",
+    "compatKey": "javascript.builtins.Number.isNaN",
+    "category": "api"
+  },
+  {
+    "id": "number-isinteger",
+    "name": "Number.isInteger",
+    "description": "Determines whether the passed value is an integer.",
+    "esVersion": "ES2015",
+    "webFeatureId": "number",
+    "sampleFile": "samples/es2015/number-is-integer.js",
+    "functionName": "demoNumberIsInteger",
+    "compatKey": "javascript.builtins.Number.isInteger",
+    "category": "api"
+  },
+  {
+    "id": "math-trunc",
+    "name": "Math.trunc",
+    "description": "Returns the integer part of a number by removing any fractional digits.",
+    "esVersion": "ES2015",
+    "webFeatureId": "math",
+    "sampleFile": "samples/es2015/math-trunc.js",
+    "functionName": "demoMathTrunc",
+    "compatKey": "javascript.builtins.Math.trunc",
+    "category": "api"
+  },
+  {
+    "id": "math-sign",
+    "name": "Math.sign",
+    "description": "Returns the sign of a number, indicating whether the number is positive, negative or zero.",
+    "esVersion": "ES2015",
+    "webFeatureId": "math",
+    "sampleFile": "samples/es2015/math-sign.js",
+    "functionName": "demoMathSign",
+    "compatKey": "javascript.builtins.Math.sign",
+    "category": "api"
+  },
+  {
+    "id": "map",
+    "name": "Map Object",
+    "description": "Key-value collection supporting arbitrary key types including objects and primitives.",
+    "esVersion": "ES2015",
+    "webFeatureId": "map",
+    "sampleFile": "samples/es2015/map.js",
+    "functionName": "demoMap",
+    "compatKey": "javascript.builtins.Map",
+    "category": "api"
+  },
+  {
+    "id": "set",
+    "name": "Set Object",
+    "description": "Collection of unique values of any type.",
+    "esVersion": "ES2015",
+    "webFeatureId": "set",
+    "sampleFile": "samples/es2015/set.js",
+    "functionName": "demoSet",
+    "compatKey": "javascript.builtins.Set",
+    "category": "api"
+  },
+  {
+    "id": "weakmap",
+    "name": "WeakMap Object",
+    "description": "Collection of key/value pairs in which keys must be objects or non-registered symbols and are held weakly.",
+    "esVersion": "ES2015",
+    "webFeatureId": "weakmap",
+    "sampleFile": "samples/es2015/weak-map.js",
+    "functionName": "demoWeakMap",
+    "compatKey": "javascript.builtins.WeakMap",
+    "category": "api"
+  },
+  {
+    "id": "weakset",
+    "name": "WeakSet Object",
+    "description": "Collection of garbage-collectable objects held weakly.",
+    "esVersion": "ES2015",
+    "webFeatureId": "weakset",
+    "sampleFile": "samples/es2015/weak-set.js",
+    "functionName": "demoWeakSet",
+    "compatKey": "javascript.builtins.WeakSet",
+    "category": "api"
+  },
+  {
+    "id": "proxy",
+    "name": "Proxy Object",
+    "description": "Enables creation of a proxy for another object, intercepting and customizing fundamental operations.",
+    "esVersion": "ES2015",
+    "webFeatureId": "proxy-reflect",
+    "sampleFile": "samples/es2015/proxy.js",
+    "functionName": "demoProxy",
+    "compatKey": "javascript.builtins.Proxy",
+    "category": "api"
+  },
+  {
+    "id": "reflect",
+    "name": "Reflect Object",
+    "description": "Built-in object providing methods for interceptable JavaScript operations mirroring Proxy handlers.",
+    "esVersion": "ES2015",
+    "webFeatureId": "proxy-reflect",
+    "sampleFile": "samples/es2015/reflect.js",
+    "functionName": "demoReflect",
+    "compatKey": "javascript.builtins.Reflect",
+    "category": "api"
+  },
+  {
+    "id": "default-parameters",
+    "name": "Default Parameters",
+    "description": "Allows formal parameters to be initialized with default values if no value or undefined is passed.",
+    "esVersion": "ES2015",
+    "webFeatureId": "functions",
+    "sampleFile": "samples/es2015/default-parameters.js",
+    "functionName": "demoDefaultParameters",
+    "compatKey": "javascript.functions.default_parameters",
+    "category": "syntax"
+  },
+  {
+    "id": "rest-parameters",
+    "name": "Rest Parameters",
+    "description": "Allows a function to accept an indefinite number of arguments as an array.",
+    "esVersion": "ES2015",
+    "webFeatureId": "functions",
+    "sampleFile": "samples/es2015/rest-parameters.js",
+    "functionName": "demoRestParameters",
+    "compatKey": "javascript.functions.rest_parameters",
+    "category": "syntax"
+  },
+  {
+    "id": "spread-syntax",
+    "name": "Spread Syntax",
+    "description": "Allows an iterable such as an array expression to be expanded in places where zero or more arguments or elements are expected.",
+    "esVersion": "ES2015",
+    "webFeatureId": "functions",
+    "sampleFile": "samples/es2015/spread-syntax.js",
+    "functionName": "demoSpreadSyntax",
+    "compatKey": "javascript.operators.spread",
+    "category": "syntax"
+  },
+  {
+    "id": "sharedarraybuffer",
+    "name": "SharedArrayBuffer",
+    "description": "Used to represent a generic, fixed-length raw binary data buffer that can be shared across worker threads.",
+    "esVersion": "ES2017",
+    "webFeatureId": "shared-memory",
+    "sampleFile": "samples/es2017/shared-array-buffer.js",
+    "functionName": "demoSharedArrayBuffer",
+    "compatKey": "javascript.builtins.SharedArrayBuffer",
+    "category": "api"
+  },
+  {
+    "id": "atomics",
+    "name": "Atomics Object",
+    "description": "Provides atomic operations as static methods to safely manage memory shared across threads.",
+    "esVersion": "ES2017",
+    "webFeatureId": "shared-memory",
+    "sampleFile": "samples/es2017/atomics.js",
+    "functionName": "demoAtomics",
+    "compatKey": "javascript.builtins.Atomics",
+    "category": "api"
+  },
+  {
+    "id": "promise-any",
+    "name": "Promise.any",
+    "description": "Takes an iterable of Promise objects and resolves as soon as any of the promises fulfills.",
+    "esVersion": "ES2021",
+    "webFeatureId": "promise-any",
+    "sampleFile": "samples/es2021/promise-any.js",
+    "functionName": "demoPromiseAny",
+    "compatKey": "javascript.builtins.Promise.any",
+    "category": "api"
+  },
+  {
+    "id": "aggregate-error",
+    "name": "AggregateError",
+    "description": "Represents an error when several errors need to be wrapped in a single error object.",
+    "esVersion": "ES2021",
+    "webFeatureId": "promise-any",
+    "sampleFile": "samples/es2021/aggregate-error.js",
+    "functionName": "demoAggregateError",
+    "compatKey": "javascript.builtins.AggregateError",
+    "category": "api"
+  },
+  {
+    "id": "weakref",
+    "name": "WeakRef",
+    "description": "Holds a weak reference to an object, allowing it to be garbage collected without preventing reclamation.",
+    "esVersion": "ES2021",
+    "webFeatureId": "weak-references",
+    "sampleFile": "samples/es2021/weak-ref.js",
+    "functionName": "demoWeakRef",
+    "compatKey": "javascript.builtins.WeakRef",
+    "category": "api"
+  },
+  {
+    "id": "finalizationregistry",
+    "name": "FinalizationRegistry",
+    "description": "Provides a way to register custom cleanup callbacks to be invoked after an object is garbage collected.",
+    "esVersion": "ES2021",
+    "webFeatureId": "weak-references",
+    "sampleFile": "samples/es2021/finalization-registry.js",
+    "functionName": "demoFinalizationRegistry",
+    "compatKey": "javascript.builtins.FinalizationRegistry",
+    "category": "api"
+  },
+  {
+    "id": "array-prototype-toreversed",
+    "name": "Array.prototype.toReversed",
+    "description": "Returns a new array with the elements in reversed order without mutating the original array.",
+    "esVersion": "ES2023",
+    "webFeatureId": "array-by-copy",
+    "sampleFile": "samples/es2023/array-to-reversed.js",
+    "functionName": "demoArrayToReversed",
+    "compatKey": "javascript.builtins.Array.toReversed",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-tosorted",
+    "name": "Array.prototype.toSorted",
+    "description": "Returns a new array with the elements sorted in ascending order without mutating the original array.",
+    "esVersion": "ES2023",
+    "webFeatureId": "array-by-copy",
+    "sampleFile": "samples/es2023/array-to-sorted.js",
+    "functionName": "demoArrayToSorted",
+    "compatKey": "javascript.builtins.Array.toSorted",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-tospliced",
+    "name": "Array.prototype.toSpliced",
+    "description": "Returns a new array with some elements removed and/or replaced at a given index without mutating the original array.",
+    "esVersion": "ES2023",
+    "webFeatureId": "array-by-copy",
+    "sampleFile": "samples/es2023/array-to-spliced.js",
+    "functionName": "demoArrayToSpliced",
+    "compatKey": "javascript.builtins.Array.toSpliced",
+    "category": "method"
+  },
+  {
+    "id": "array-prototype-with",
+    "name": "Array.prototype.with",
+    "description": "Returns a new array with the element at the given index replaced with the given value without mutating the original array.",
+    "esVersion": "ES2023",
+    "webFeatureId": "array-by-copy",
+    "sampleFile": "samples/es2023/array-with.js",
+    "functionName": "demoArrayWith",
+    "compatKey": "javascript.builtins.Array.with",
+    "category": "method"
+  },
+  {
+    "id": "arraybuffer-prototype-resize",
+    "name": "ArrayBuffer.prototype.resize",
+    "description": "Resizes the ArrayBuffer to the specified size in bytes.",
+    "esVersion": "ES2024",
+    "webFeatureId": "resizable-buffers",
+    "sampleFile": "samples/es2024/array-buffer-resize.js",
+    "functionName": "demoArrayBufferResize",
+    "compatKey": "javascript.builtins.ArrayBuffer.resize",
+    "category": "method"
+  },
+  {
+    "id": "arraybuffer-prototype-transfer",
+    "name": "ArrayBuffer.prototype.transfer",
+    "description": "Creates a new ArrayBuffer with the same byte content as this buffer, then detaches this buffer.",
+    "esVersion": "ES2024",
+    "webFeatureId": "resizable-buffers",
+    "sampleFile": "samples/es2024/array-buffer-transfer.js",
+    "functionName": "demoArrayBufferTransfer",
+    "compatKey": "javascript.builtins.ArrayBuffer.transfer",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-iswellformed",
+    "name": "String.prototype.isWellFormed",
+    "description": "Returns a boolean indicating whether this string contains any lone surrogates.",
+    "esVersion": "ES2024",
+    "webFeatureId": "string-wellformed",
+    "sampleFile": "samples/es2024/string-is-well-formed.js",
+    "functionName": "demoStringIsWellFormed",
+    "compatKey": "javascript.builtins.String.isWellFormed",
+    "category": "method"
+  },
+  {
+    "id": "string-prototype-towellformed",
+    "name": "String.prototype.toWellFormed",
+    "description": "Returns a string where any lone surrogate code points in this string are replaced with the Unicode replacement character U+FFFD.",
+    "esVersion": "ES2024",
+    "webFeatureId": "string-wellformed",
+    "sampleFile": "samples/es2024/string-to-well-formed.js",
+    "functionName": "demoStringToWellFormed",
+    "compatKey": "javascript.builtins.String.toWellFormed",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-intersection",
+    "name": "Set.prototype.intersection",
+    "description": "Takes a set and returns a new set containing elements in both this set and the given set.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-intersection.js",
+    "functionName": "demoSetIntersection",
+    "compatKey": "javascript.builtins.Set.intersection",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-union",
+    "name": "Set.prototype.union",
+    "description": "Takes a set and returns a new set containing elements present in either or both sets.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-union.js",
+    "functionName": "demoSetUnion",
+    "compatKey": "javascript.builtins.Set.union",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-difference",
+    "name": "Set.prototype.difference",
+    "description": "Takes a set and returns a new set containing elements in this set but not in the given set.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-difference.js",
+    "functionName": "demoSetDifference",
+    "compatKey": "javascript.builtins.Set.difference",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-symmetricdifference",
+    "name": "Set.prototype.symmetricDifference",
+    "description": "Takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-symmetric-difference.js",
+    "functionName": "demoSetSymmetricDifference",
+    "compatKey": "javascript.builtins.Set.symmetricDifference",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-issubsetof",
+    "name": "Set.prototype.isSubsetOf",
+    "description": "Takes a set and returns a boolean indicating if all elements of this set are in the given set.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-is-subset-of.js",
+    "functionName": "demoSetIsSubsetOf",
+    "compatKey": "javascript.builtins.Set.isSubsetOf",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-issupersetof",
+    "name": "Set.prototype.isSupersetOf",
+    "description": "Takes a set and returns a boolean indicating if all elements of the given set are in this set.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-is-superset-of.js",
+    "functionName": "demoSetIsSupersetOf",
+    "compatKey": "javascript.builtins.Set.isSupersetOf",
+    "category": "method"
+  },
+  {
+    "id": "set-prototype-isdisjointfrom",
+    "name": "Set.prototype.isDisjointFrom",
+    "description": "Takes a set and returns a boolean indicating if this set has no elements in common with the given set.",
+    "esVersion": "ES2025",
+    "webFeatureId": "set-methods",
+    "sampleFile": "samples/es2025/set-is-disjoint-from.js",
+    "functionName": "demoSetIsDisjointFrom",
+    "compatKey": "javascript.builtins.Set.isDisjointFrom",
+    "category": "method"
+  },
+  {
+    "id": "float16array",
+    "name": "Float16Array",
+    "description": "TypedArray representing an array of 16-bit half-precision floating point numbers.",
+    "esVersion": "ES2025",
+    "webFeatureId": "float16array",
+    "sampleFile": "samples/es2025/float16-array.js",
+    "functionName": "demoFloat16Array",
+    "compatKey": "javascript.builtins.Float16Array",
+    "category": "api"
+  },
+  {
+    "id": "math-f16round",
+    "name": "Math.f16round",
+    "description": "Rounds a number to the nearest 16-bit half precision float.",
+    "esVersion": "ES2025",
+    "webFeatureId": "float16array",
+    "sampleFile": "samples/es2025/math-f16round.js",
+    "functionName": "demoMathF16round",
+    "compatKey": "javascript.builtins.Math.f16round",
+    "category": "api"
+  },
+  {
+    "id": "uint8array-base64",
+    "name": "Uint8Array Base64 Encoding/Decoding",
+    "description": "Methods on Uint8Array to encode bytes to Base64 (toBase64) and parse Base64 strings to bytes (fromBase64).",
+    "esVersion": "ES2026",
+    "webFeatureId": "uint8array-base64-hex",
+    "sampleFile": "samples/es2026/uint8array-base64.js",
+    "functionName": "demoUint8ArrayBase64",
+    "compatKey": "javascript.builtins.Uint8Array.toBase64",
+    "category": "method"
+  },
+  {
+    "id": "uint8array-hex",
+    "name": "Uint8Array Hexadecimal Encoding/Decoding",
+    "description": "Methods on Uint8Array to encode bytes to hexadecimal (toHex) and parse hex strings to bytes (fromHex).",
+    "esVersion": "ES2026",
+    "webFeatureId": "uint8array-base64-hex",
+    "sampleFile": "samples/es2026/uint8array-hex.js",
+    "functionName": "demoUint8ArrayHex",
+    "compatKey": "javascript.builtins.Uint8Array.toHex",
+    "category": "method"
   }
 ]
