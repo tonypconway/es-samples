@@ -8,6 +8,8 @@
     ".": "./samples/index.js",
     "./samples": "./samples/index.js",
     "./samples/index.js": "./samples/index.js",
+    "./features.json": "./features.json",
+    "./features": "./features.json",
     "./samples/*": "./samples/*",
     "./*": "./samples/*"
   },
