@@ -40,7 +40,7 @@
     "webFeatureId": "object-object",
     "sampleFile": "samples/es2011/getters-and-setters.js",
     "functionName": "demoGettersAndSetters",
-    "compatKey": "javascript.operators.object_initializer.getter",
+    "compatKey": "javascript.functions.get",
     "category": "syntax"
   },
   {
@@ -51,7 +51,7 @@
     "webFeatureId": "strings",
     "sampleFile": "samples/es2011/string-indexing.js",
     "functionName": "demoStringIndexing",
-    "compatKey": "javascript.builtins.String.bracket_access",
+    "compatKey": "javascript.builtins.String",
     "category": "syntax"
   },
   {
@@ -403,7 +403,7 @@
     "webFeatureId": "optional-catch-binding",
     "sampleFile": "samples/es2019/optional-catch-binding.js",
     "functionName": "demoOptionalCatchBinding",
-    "compatKey": "javascript.statements.try.optional_catch_binding",
+    "compatKey": "javascript.statements.try_catch.optional_catch_binding",
     "category": "syntax"
   },
   {
